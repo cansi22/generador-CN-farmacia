@@ -1,0 +1,139 @@
+/* styles.css */
+
+/* --- Configuración General (Tema Oscuro) --- */
+:root {
+    --color-fondo-principal: #1f1f1f;
+    --color-fondo-secundario: #2c2c2c;
+    --color-texto-principal: #e0e0e0;
+    --color-borde: #555;
+    --color-acento: #4CAF50; /* Verde, color de éxito */
+    --color-alerta: #FFC107; /* Amarillo */
+}
+
+body {
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea al inicio, no al centro verticalmente */
+    min-height: 100vh;
+}
+
+/* --- Contenedor Principal --- */
+.contenedor {
+    background-color: var(--color-fondo-secundario);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 500px;
+    margin-top: 50px; /* Separación superior para que no esté pegado al borde */
+}
+
+/* --- Títulos y Párrafos --- */
+h1 {
+    color: var(--color-acento);
+    text-align: center;
+    margin-bottom: 5px;
+    font-weight: 300;
+    font-size: 1.8em;
+}
+
+p {
+    text-align: center;
+    color: var(--color-texto-principal);
+    margin-bottom: 25px;
+    font-size: 0.95em;
+}
+
+/* --- Etiqueta de Input --- */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 400;
+    font-size: 1em;
+    color: var(--color-texto-principal);
+}
+
+/* --- Campo de Texto (Input) --- */
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+    border: 1px solid var(--color-borde);
+    border-radius: 6px;
+    font-size: 1.2em;
+    background-color: #383838;
+    color: var(--color-acento);
+    transition: border-color 0.3s, box-shadow 0.3s;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.4);
+    outline: none;
+}
+
+/* --- Sección de Resultados --- */
+.resultado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    padding: 15px 0;
+    border-top: 1px solid var(--color-borde);
+}
+
+.resultado:last-of-type {
+    border-bottom: 1px solid var(--color-borde);
+    margin-bottom: 0;
+}
+
+.etiqueta {
+    font-weight: 300;
+    color: var(--color-texto-principal);
+    font-size: 0.9em;
+    flex: 1;
+}
+
+.valor {
+    font-weight: bold;
+    color: var(--color-alerta); /* Usamos un color diferente para destacar el valor */
+    font-size: 1.2em;
+    text-align: right;
+    flex: 2;
+    word-break: break-all; /* Asegura que los códigos largos se envuelvan */
+}
+
+/* Estilo para el GTIN completo */
+#gtinResultado.valor {
+    color: var(--color-acento); /* GTIN completo en verde de éxito */
+}
+
+/* Media Query para dispositivos móviles */
+@media (max-width: 600px) {
+    .contenedor {
+        margin-top: 20px;
+        padding: 20px;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .resultado {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+    .etiqueta {
+        margin-bottom: 5px;
+        font-size: 1em;
+    }
+    .valor {
+        font-size: 1.1em;
+        text-align: left;
+    }
+}

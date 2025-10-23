@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de GTIN y Dígito de Control CN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="contenedor">
+
+        <h1>Generador de GTIN y Dígito de Control CN</h1>
+        <p>Introduzca el Código Nacional (CN) de 6 dígitos:</p>
+
+        <div>
+            <label for="codigoNacional">Código Nacional (CN):</label>
+            <input type="text" id="codigoNacional" maxlength="6" pattern="[0-9]*" oninput="calcularGTIN()" inputmode="numeric">
+        </div>
+
+        <div class="resultado">
+            <span class="etiqueta">Dígito de Control (Séptimo dígito) y CN Completo:</span>
+            <strong class="valor" id="digitoControlResultado">—</strong>
+        </div>
+
+        <div class="resultado">
+            <span class="etiqueta">GTIN (Código de barras completo EAN-13):</span>
+            <strong class="valor" id="gtinResultado">—</strong>
+        </div>
+        
+        <footer style="text-align: center; margin-top: 30px; padding-top: 15px; border-top: 1px solid #444;">
+            <p style="margin: 0; font-size: 0.8em;">Creado por <a href="https://github.com/cansi22" target="_blank" style="color: var(--color-acento); text-decoration: none;">cansi22</a></p>
+        </footer>
+    
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

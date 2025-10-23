@@ -16,13 +16,16 @@ Esta utilidad calcula dos elementos clave, asumiendo un CN base de **6 dígitos*
 ## 🛠️ Uso
 
 Simplemente introduce el **CN base de 6 dígitos** en el campo de texto. Los resultados se actualizarán automáticamente.
+Aquí puedes ver una captura de pantalla de la herramienta en funcionamiento:
 
+![Captura de pantalla de la herramienta Generador de GTIN y CN](demo.png)
 ### Estructura de Códigos Generados
 
 | Código Generado | Base de Cálculo | Ejemplo (CN Base: 123456) |
 | :--- | :--- | :--- |
 | **CN de 7 dígitos** | CN Base + DC Interno | `123456X` (Donde X es el DC Interno) |
 | **GTIN (EAN-13)** | `847000` + CN Base + DC EAN-13 | `847000123456Y` (Donde Y es el DC EAN-13) |
+
 
 ---
 

@@ -2,6 +2,7 @@
 
 Herramienta web sencilla, alojada en GitHub Pages, diseñada para calcular y validar los códigos de control del sector farmacéutico español a partir de un Código Nacional (CN) base.
 
+WEB: (https://cansi22.github.io/generador-CN-farmacia/)
 ---
 
 ## 💡 Características
